@@ -30,13 +30,34 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+    The difference is that forEach "iterates over an array" and map "iterates over an array and returns the result"
+
 2. What is the difference between a function and a method?
+
+    A function is a piece of code that is called by name. It can be passed data to operate on (i.e. the parameters) and can optionally return data (the return value). All data that is passed to a function is explicitly passed.
+
+    A method is a piece of code that is called by a name that is associated with an object. In most respects it is identical to a function except for two key differences:
+
+    A method is implicitly passed the object on which it was called.
+
+    A method is able to operate on data that is contained within the class (remembering that an object is an instance of a class - the class is the definition, the object is an instance of that data).
 
 3. What is closure?
 
+    The Closure allows a function to carry its scope from another context or we can say another lexical scope.
+
 4. Describe the four rules of the 'this' keyword.
 
+    1. Whenever a function is contained in the global scope, the value of this inside of that function will be the window object.
+    2. Whenever a function is called by a preceding dot, the object before that dot is this.
+    3. Whenever a constructor function is used, this refers to the specifc instance of the object that is created and returned by the constructor function.
+    4. Whenever Javascipt's call or apply method is used, this is explicitly defined.
+    
 5. Why do we need super() in an extended class?
+
+    Calling exactly super() is always redundant. It's explicitly doing what would be implicitly done otherwise. That's because if you omit a call to the super constructor, the no-argument super constructor will be invoked automatically anyway. Not to say that it's bad style; some people like being explicit.
+
+    However, where it becomes useful is when the super constructor takes arguments that you want to pass in from the subclass.
 
 ## Project Set up
 
